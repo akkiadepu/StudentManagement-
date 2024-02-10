@@ -52,7 +52,8 @@ public class LoginServelt extends HttpServlet {
 				session.setAttribute("username", username);
 				RequestDispatcher rd = request.getRequestDispatcher("student.jsp");
 				rd.forward(request, response);
-				
+//				RequestDispatcher rd = request.getRequestDispatcher("Stu_02");
+//				rd.forward(request, response);
 			}
 			else {
 				response.sendRedirect("index.jsp");

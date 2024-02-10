@@ -11,7 +11,7 @@
 	<h3>Login</h3>
 	<form action="ls" method="post">
 	Username: <input type="text" name="username"/><br><br>
-	Password:<input type="text" name="password"/><br><br>
+	Password:<input type="password" name="password"/><br><br>
 	<input type="submit" value="login"><br><br>
 	<input type="reset" value="cancel"><br><br>
 	
