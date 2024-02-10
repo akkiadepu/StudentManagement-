@@ -9,4 +9,14 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>LoginServelt</display-name>
+    <servlet-name>LoginServelt</servlet-name>
+    <servlet-class>com.codegana.web.LoginServelt</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginServelt</servlet-name>
+    <url-pattern>/ls</url-pattern>
+  </servlet-mapping>
 </web-app>
