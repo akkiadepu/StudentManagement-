@@ -17,7 +17,7 @@ public class UserDao extends Dao {
 
 	public UserDao() throws ClassNotFoundException, SQLException {
 		super();
-		// TODO Auto-generated constructor stub
+		
 	}
 
 //	find 
@@ -27,7 +27,7 @@ public class UserDao extends Dao {
 		try (Connection con = ConnectionManager.getConnection(); Statement stmt = con.createStatement();) {
 			con.commit();
 
-			String sql = "select * from customer_2 where username='" + username + "'";
+			String sql = "select * from customer_2 where username= binary'"+ username +"'";
 			logger.debug("Executing sql command :" + sql);
 			ResultSet rs = stmt.executeQuery(sql);
 			if (rs.next()) {
