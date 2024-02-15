@@ -15,7 +15,7 @@
 </head>
 <body>
 	<h2>Student management system 1</h2>
-	<form action="studReg" method="post">
+	<form  method="post" action="studReg" >
 	Id:<input type="text" name="id" /><br><br>
 	Name:<input type="text" name="name"/><br><br>
 	Email:<input type="text" name="email"/><br/><br/>

@@ -49,4 +49,14 @@
     <servlet-name>DeleteStudent</servlet-name>
     <url-pattern>/deleteStu</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Signout</display-name>
+    <servlet-name>Signout</servlet-name>
+    <servlet-class>com.codegana.web.Signout</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Signout</servlet-name>
+    <url-pattern>/Signout</url-pattern>
+  </servlet-mapping>
 </web-app>

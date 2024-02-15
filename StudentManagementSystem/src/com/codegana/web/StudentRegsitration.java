@@ -34,6 +34,21 @@ public class StudentRegsitration extends HttpServlet {
 	 */
     Logger logger =Logger.getLogger(StudentRegsitration.class);
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		
+//		contali pat ,user page,Admin pane 
+		
+		
+		
+		
+	}
+	
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session =request.getSession();
 		if(session != null && session.getAttribute("username")!= null) {
 			int id =Integer.parseInt(request.getParameter("id"));
@@ -54,19 +69,9 @@ public class StudentRegsitration extends HttpServlet {
 			} catch (SQLException e) {
 				logger.error(e);
 			}
+			response.sendRedirect("student.jsp");
 		}
 		
-		
-		
-	}
-	
-
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		response.sendRedirect("student.jsp");
 		
 	}
 	
