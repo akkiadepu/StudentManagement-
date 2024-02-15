@@ -15,6 +15,16 @@
 </head>
 <body>
 	<h2>Student management system 1</h2>
+	<form action="studReg" method="post">
+	Id:<input type="text" name="id" /><br><br>
+	Name:<input type="text" name="name"/><br><br>
+	Email:<input type="text" name="email"/><br/><br/>
+	<input type="submit" value="Register">
+	<input type="reset" value="celse"> 
+	
+	</form>
+	<br/><br/>
+	
 	<%
 		StudentService studentservice = new StudentService();
 			 List<Student>students= studentservice.FindAllStudents();
@@ -25,6 +35,7 @@
 			<th>Id</th>
 			<th>Name</th>
 			<th>Email</th>
+			<th>Edit | Delete</th>
 
 		</tr>
 	<%
@@ -34,17 +45,16 @@
 			<td><%=student.getId()%></td>
 			<td><%=student.getName()%></td>
 			<td><%=student.getEmail()%></td>
+			<td><a href="editStudent.jsp?id=<%=student.getId()%>">edit </a> | <a href="deleteStu?id=<%=student.getId()%>">delete</a></td>
 		</tr>
 		<%
 		}
 		%>
 		
 	</table>
-	<%
-		
-	%>
 
 
+	<a href="Signout"> Sign out</a>
 </body>
 </html>
 <%
@@ -52,7 +62,7 @@
 %>
 
 <jsp:forward page="index.jsp">
-	<jsp:param value="invalid" name="msg" />
+	<jsp:param value="invalid way to access" name="msg" />
 </jsp:forward>
 <%
 	//	response.sendRedirect("index.jsp");

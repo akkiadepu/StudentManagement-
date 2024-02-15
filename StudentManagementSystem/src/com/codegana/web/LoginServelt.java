@@ -34,9 +34,10 @@ public class LoginServelt extends HttpServlet {
 	 */
     Logger logger = Logger.getLogger(LoginServelt.class);
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
-		
+//		// TODO Auto-generated method stub
+//		response.getWriter().append("Served at: ").append(request.getContextPath());
+//	
+		response.sendRedirect("index.jsp");
 		
 	}
 
@@ -60,9 +61,7 @@ public class LoginServelt extends HttpServlet {
 			else {
 				HttpSession session =request.getSession();
 				session.setAttribute("msg","invaild credentials");
-				RequestDispatcher rd=request.getRequestDispatcher("index.jsp");
-				rd.forward(request, response);
-//				response.sendRedirect("index.jsp");
+				response.sendRedirect("index.jsp");
 			}
 		} catch (ClassNotFoundException e) {
 			logger.error(e);

@@ -16,7 +16,6 @@ public class StudentService {
 		logger.debug("Finding studet by ID"+id);
 		StudentDao studentDao=new StudentDao();
 		Student student= studentDao.findById(id);
-		
 		logger.debug("returning the student");
 		return student;
 
@@ -27,7 +26,7 @@ public class StudentService {
 		logger.debug("Finding all the students");
 		StudentDao studentDao=new StudentDao();
 		List<Student> student= studentDao.findAll();
-		logger.debug("sending the student list");
+		logger.debug("sending the student list"+student.size());
 		return student;		
 	}
 	
@@ -36,11 +35,11 @@ public class StudentService {
 		StudentDao studentDao=new StudentDao();
 		if(studentDao.save(student)) {
 			studentDao.commit();
-			logger.debug("commiting the student");
+			logger.debug("commiting the student"+student.getId());
 			return true;
 		}
 		else {
-			logger.debug("can not save the student");
+			logger.debug("can not save the student"+student.getId());
 			studentDao.rollback();
 			return false;
 		}
@@ -52,11 +51,11 @@ public class StudentService {
 		StudentDao studentDao=new StudentDao();
 		if(studentDao.edit(student)) {
 			studentDao.commit();
-			logger.debug("student  edited sucessfully");
+			logger.debug("student  edited sucessfully"+student.getId());
 			return true;
 		}
 		else {
-			logger.debug("can not edit the student");
+			logger.debug("can not edit the student"+student.getId());
 			studentDao.rollback();
 			return false;
 		}
@@ -67,12 +66,12 @@ public class StudentService {
 		if(studentDao.delete(id)) {
 			
 			studentDao.commit();
-			logger.debug("student deleted sucessfully");
+			logger.debug("student deleted sucessfully"+id);
 			return true;
 		}
 		else {
 			studentDao.rollback();
-			logger.debug("can not delete student");
+			logger.debug("can not delete student"+id);
 			return false;
 		}
 	}

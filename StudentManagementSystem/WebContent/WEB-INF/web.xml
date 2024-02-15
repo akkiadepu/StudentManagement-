@@ -19,4 +19,34 @@
     <servlet-name>LoginServelt</servlet-name>
     <url-pattern>/ls</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>StudentRegsitration</display-name>
+    <servlet-name>StudentRegsitration</servlet-name>
+    <servlet-class>com.codegana.web.StudentRegsitration</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>StudentRegsitration</servlet-name>
+    <url-pattern>/studReg</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>UpdateStudent</display-name>
+    <servlet-name>UpdateStudent</servlet-name>
+    <servlet-class>com.codegana.web.UpdateStudent</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UpdateStudent</servlet-name>
+    <url-pattern>/editstu</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>DeleteStudent</display-name>
+    <servlet-name>DeleteStudent</servlet-name>
+    <servlet-class>com.codegana.web.DeleteStudent</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeleteStudent</servlet-name>
+    <url-pattern>/deleteStu</url-pattern>
+  </servlet-mapping>
 </web-app>
